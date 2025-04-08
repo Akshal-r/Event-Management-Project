@@ -1,0 +1,79 @@
+.admin-dashboard {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 30px;
+    background-color: #f0f3f5;
+    min-height: 100vh;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .summary-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .summary-card {
+    flex: 1;
+    min-width: 220px;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .card-count {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin: 8px 0;
+  }
+  
+  .card-options {
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+  
+  .card-options li {
+    font-size: 0.9rem;
+  }
+  
+  .action-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .action-card {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .action-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .action-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+  

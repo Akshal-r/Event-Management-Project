@@ -1,0 +1,93 @@
+.login-container {
+  height: 100vh;
+  background: linear-gradient(to right, #f3b6e6, #b1d4e8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-box {
+  background: #fff;
+  padding: 40px;
+  width: 350px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: #eee;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab-buttons .active-tab {
+  background: #a445b2;
+  color: #fff;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #111;
+}
+
+.login-box form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.login-btn {
+  width: 100%;
+  background: linear-gradient(to right, #a445b2, #fa4299);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.forgot-link {
+  text-align: right;
+  margin-top: 5px;
+}
+
+.forgot-link a {
+  font-size: 13px;
+  color: #a445b2;
+  text-decoration: none;
+}
+
+.login-box p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-box a {
+  color: #a445b2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}

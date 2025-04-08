@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "title": "Digital Marketing Workshop",
+      "date": "May 15, 2025",
+      "description": "Join us for an engaging workshop exploring the latest in digital marketing strategies.",
+      "image": "/assets/digitalmarketing.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Alumni Interaction",
+      "date": "April 19, 2025",
+      "description": "Connect with our successful alumni and gain insights into career development and opportunities.",
+      "image": "/assets/alumniinteraction.jpg"
+    },
+    {
+      "id": 3,
+      "title": "HR Connect",
+      "date": "April 27, 2025",
+      "description": "Interact with HR professionals and understand the latest hiring trends and expectations.",
+      "image": "/assets/hrconnect.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Value Added Course",
+      "date": "May 07 to May 12, 2025",
+      "description": "Enroll in specialized courses that offer skills beyond the syllabus and increase your industry readiness.",
+      "image": "/assets/valueaddedcourse.jpg"
+    }
+  ]
+  

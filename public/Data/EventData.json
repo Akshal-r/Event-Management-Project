@@ -1,0 +1,96 @@
+{
+  "upcoming": [
+    {
+      "id": 1,
+      "title": "Annual Science Symposium 2023",
+      "date": "March 15, 2023",
+      "venue": "Main Auditorium, Campus A",
+      "department": "Department of Science",
+      "about": "An enlightening symposium that dives into emerging technologies in biology, chemistry, and physics.",
+      "bgColor": "#cceeff",
+      "speakers": [
+        {
+          "name": "Dr. Emily Carter",
+          "photo": "/images/speaker1.jpg",
+          "bio": "A renowned physicist with research in quantum mechanics and renewable energy."
+        },
+        {
+          "name": "Prof. John Smith",
+          "photo": "/images/speaker2.jpg",
+          "bio": "A leading biologist with a focus on molecular biology and genetics."
+        },
+        {
+          "name": "Dr. Lisa Wang",
+          "photo": "/images/speaker3.jpg",
+          "bio": "An environmental scientist advocating sustainability and conservation."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "TechTalk: AI & ML Future",
+      "date": "April 20, 2025",
+      "venue": "Conference Hall B",
+      "department": "Computer Science",
+      "about": "A panel discussion on the future of Artificial Intelligence and Machine Learning.",
+      "bgColor": "#e0ffd4",
+      "speakers": [
+        {
+          "name": "Mr. Arjun Mehta",
+          "photo": "/images/speaker4.jpg",
+          "bio": "Tech Lead at AI Labs, expert in generative AI."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Cybersecurity Awareness Bootcamp",
+      "date": "May 5, 2025",
+      "venue": "Lab 3, Block C",
+      "department": "Information Technology",
+      "about": "Learn how to protect yourself from cyber threats in a hands-on workshop.",
+      "bgColor": "#fff3cd",
+      "speakers": [
+        {
+          "name": "Ms. Priya Das",
+          "photo": "/images/speaker5.jpg",
+          "bio": "Certified Ethical Hacker and guest trainer at DEF CON India."
+        }
+      ]
+    }
+  ],
+  "past": [
+    {
+      "id": 4,
+      "title": "Women in STEM Conference",
+      "date": "January 10, 2025",
+      "venue": "Seminar Hall D",
+      "department": "General",
+      "about": "Celebrating women leaders in science and tech with keynote talks and networking.",
+      "bgColor": "#ffe6e6",
+      "speakers": [
+        {
+          "name": "Dr. Meera Sinha",
+          "photo": "/images/speaker6.jpg",
+          "bio": "STEM advocate and director at Women Tech Network."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Hackathon 2024 - Code Warriors",
+      "date": "December 2, 2024",
+      "venue": "Innovation Hub, Block A",
+      "department": "Computer Applications",
+      "about": "A 24-hour hackathon where teams built solutions for real-world problems.",
+      "bgColor": "#d9f7ff",
+      "speakers": [
+        {
+          "name": "Mr. Nishant Rao",
+          "photo": "/images/speaker7.jpg",
+          "bio": "Startup founder and innovation mentor."
+        }
+      ]
+    }
+  ]
+}

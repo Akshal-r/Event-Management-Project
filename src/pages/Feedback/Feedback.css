@@ -1,0 +1,83 @@
+.feedback-form-container {
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fefefe;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .feedback-form-container h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  
+  .feedback-form-container p {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #f2ffe6;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .name-inputs {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .checkbox-group label {
+    background-color: #f2ffe6;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+  
+  .feedback-table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+  }
+  
+  .feedback-table th,
+  .feedback-table td {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  textarea {
+    height: 100px;
+    margin-top: 10px;
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    margin-top: 30px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
