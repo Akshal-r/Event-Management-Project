@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
 
-function Login() {
+function Login({ setIsAuthenticated }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -21,7 +21,8 @@ function Login() {
       if (matchedUser) {
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("username", matchedUser.username);
-        navigate("/Home");
+        setIsAuthenticated(true); // ✅ This notifies App.jsx to re-render
+        navigate("/home");
       } else {
         alert("Invalid email or password");
       }

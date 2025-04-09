@@ -1,9 +1,19 @@
-// src/Components/Header/Header.jsx
+
 import React from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const username = localStorage.getItem("username");
+
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("username");
+    navigate("/login");
+  };
+
   return (
     <header className="header">
       <div className="logo-section">
@@ -16,6 +26,17 @@ function Header() {
         <Link to="/feedback">Feedback</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/admin">Admin</Link>
+
+        {!isLoggedIn ? (
+          <Link to="/login" className="login-link">Login</Link>
+        ) : (
+          <>
+            
+            <button className="logout-btn" onClick={handleLogout}>
+              Logout
+            </button>
+          </>
+        )}
       </nav>
     </header>
   );

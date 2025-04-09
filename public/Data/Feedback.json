@@ -1,0 +1,20 @@
+{
+    "questions": [
+      {
+        "label": "How satisfied were you with the event?",
+        "name": "satisfaction",
+        "options": ["Very Satisfied", "Satisfied", "Neutral", "Dissatisfied", "Very Dissatisfied"]
+      },
+      {
+        "label": "How well was the event organized?",
+        "name": "organization",
+        "options": ["Excellent", "Good", "Average", "Poor"]
+      },
+      {
+        "label": "Rate the quality of the speakers or presenters",
+        "name": "speakers",
+        "options": ["Excellent", "Good", "Fair", "Poor"]
+      }
+    ]
+  }
+  

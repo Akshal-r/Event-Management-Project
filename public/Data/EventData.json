@@ -2,26 +2,26 @@
   "upcoming": [
     {
       "id": 1,
-      "title": "Annual Science Symposium 2023",
-      "date": "March 15, 2023",
-      "venue": "Main Auditorium, Campus A",
+      "title": "Annual Science Symposium 2025",
+      "date": "May 15, 2025",
+      "venue": "Main Auditorium",
       "department": "Department of Science",
       "about": "An enlightening symposium that dives into emerging technologies in biology, chemistry, and physics.",
       "bgColor": "#cceeff",
       "speakers": [
         {
-          "name": "Dr. Emily Carter",
-          "photo": "/images/speaker1.jpg",
+          "name": "Dr. Karthigai Pandian",
+          "photo": "/assets/image7.jpg",
           "bio": "A renowned physicist with research in quantum mechanics and renewable energy."
         },
         {
           "name": "Prof. John Smith",
-          "photo": "/images/speaker2.jpg",
+          "photo": "/assets/img1.jpg",
           "bio": "A leading biologist with a focus on molecular biology and genetics."
         },
         {
-          "name": "Dr. Lisa Wang",
-          "photo": "/images/speaker3.jpg",
+          "name": "Dr. Meera Sinha",
+          "photo": "/assets/img5.jpg",
           "bio": "An environmental scientist advocating sustainability and conservation."
         }
       ]
@@ -36,8 +36,8 @@
       "bgColor": "#e0ffd4",
       "speakers": [
         {
-          "name": "Mr. Arjun Mehta",
-          "photo": "/images/speaker4.jpg",
+          "name": "Ms. Varsha",
+          "photo": "/assets/img2.jpg",
           "bio": "Tech Lead at AI Labs, expert in generative AI."
         }
       ]
@@ -53,7 +53,7 @@
       "speakers": [
         {
           "name": "Ms. Priya Das",
-          "photo": "/images/speaker5.jpg",
+          "photo": "/assets/img3.jpg",
           "bio": "Certified Ethical Hacker and guest trainer at DEF CON India."
         }
       ]
@@ -71,7 +71,7 @@
       "speakers": [
         {
           "name": "Dr. Meera Sinha",
-          "photo": "/images/speaker6.jpg",
+          "photo": "/assets/img4.jpg",
           "bio": "STEM advocate and director at Women Tech Network."
         }
       ]
@@ -87,7 +87,7 @@
       "speakers": [
         {
           "name": "Mr. Nishant Rao",
-          "photo": "/images/speaker7.jpg",
+          "photo": "/assets/img6.jpg",
           "bio": "Startup founder and innovation mentor."
         }
       ]

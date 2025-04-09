@@ -4,15 +4,15 @@ import './Contact.css';
 const ContactPage = () => {
   return (
     <div className="contact-container">
-      <h2 className="contact-title">Contact</h2>
+      <h2 className="contact-title">Contact Us</h2>
 
       <div className="contact-form-section">
         <div className="contact-image">
-          <img src="/contact-student.jpg" alt="Student" />
+          <img src="/assets/contact.png" alt="Student" />
         </div>
         <div className="contact-form">
           <h3>Leave Us A Message</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>If any Queries you have! Fell free to Reach Out</p>
           <form>
             <div className="input-group">
               <input type="text" placeholder="Name*" />
@@ -32,15 +32,15 @@ const ContactPage = () => {
         </div>
         <div className="info-box">
           <h4>📧 Email</h4>
-          <p>example@university.com</p>
+          <p>npr@cet.com</p>
         </div>
         <div className="info-box">
           <h4>📍 Address</h4>
-          <p>24/A Mount View, London, UK 234567</p>
+          <p>NPR College of Engineering and Technology, Natham, Dindigul.</p>
         </div>
         <div className="map-box">
           <iframe
-            src="https://maps.google.com/maps?q=London&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            src="https://www.bing.com/maps/embed?h=400&w=500&cp=10.241255~78.180127&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
             width="100%"
             height="250"
             style={{ border: 0 }}

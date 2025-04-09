@@ -1,0 +1,15 @@
+[
+    {
+      "name": "Akshal",
+      "email": "akshal@email.com",
+      "eventName": "Tech Symposium",
+      "feedback": "Great session!"
+    },
+    {
+      "name": "Ashima",
+      "email": "kilma@email.com",
+      "eventName": "Workshop",
+      "feedback": "Learned a lot!"
+    }
+  ]
+  

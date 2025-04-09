@@ -1,119 +1,86 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Feedback.css';
 
 const FeedbackForm = () => {
   const [formData, setFormData] = useState({
     eventName: '',
-    firstName: '',
-    lastName: '',
-    activities: [],
-    feedback: {
-      cultural: '',
-      artistic: '',
-      audience: ''
-    },
-    comments: ''
+    name: '',
+    registerNumber: '',
+    email: '',
+    satisfaction: '',
+    organization: '',
+    speakers: '',
+    learning: '',
+    suggestions: ''
   });
 
-  const categories = [
-    'Music', 'History', 'Social', 'Sport',
-    'Environment', 'Cinema', 'Food', 'Other'
-  ];
+  const [questions, setQuestions] = useState([]);
 
-  const handleCheckboxChange = (category) => {
-    setFormData(prev => {
-      const isSelected = prev.activities.includes(category);
-      const updated = isSelected
-        ? prev.activities.filter(item => item !== category)
-        : [...prev.activities, category];
-      return { ...prev, activities: updated };
-    });
-  };
+  // ✅ Fetch questions dynamically from JSON file
+  useEffect(() => {
+    fetch('/Data/Feedback.json')
+      .then(response => response.json())
+      .then(data => setQuestions(data.questions))
+      .catch(error => console.error("Error fetching feedback data:", error));
+  }, []);
 
-  const handleRadioChange = (section, value) => {
-    setFormData(prev => ({
-      ...prev,
-      feedback: { ...prev.feedback, [section]: value }
-    }));
-  };
+  // ✅ Show feedback reminder if attended but not submitted
+  useEffect(() => {
+    const attended = localStorage.getItem("attendedEvent");
+    const submitted = localStorage.getItem("feedbackSubmitted");
+    if (attended && !submitted) {
+      alert("You attended an event. Please take a moment to submit your feedback!");
+    }
+  }, []);
 
-  const handleInputChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Feedback Submitted:', formData);
-    alert("Thank you for your feedback!");
+    console.log("Submitted Feedback:", formData);
+    localStorage.setItem("feedbackSubmitted", "true");
+    alert("Thank you for your valuable feedback!");
   };
 
   return (
     <div className="feedback-form-container">
-      <h2>Cultural Event Feedback Form</h2>
-      <p>Please tell us your feedback!</p>
+      <h2>Event Feedback Form</h2>
+      <p>We value your feedback. Please fill out the form below:</p>
 
       <form onSubmit={handleSubmit}>
         <label>Event Name</label>
-        <input type="text" name="eventName" value={formData.eventName} onChange={handleInputChange} required />
+        <input type="text" name="eventName" value={formData.eventName} onChange={handleChange} required />
 
         <label>Your Name</label>
-        <div className="name-inputs">
-          <input type="text" name="firstName" placeholder="First" value={formData.firstName} onChange={handleInputChange} required />
-          <input type="text" name="lastName" placeholder="Last" value={formData.lastName} onChange={handleInputChange} required />
-        </div>
+        <input type="text" name="name" value={formData.name} onChange={handleChange} required />
 
-        <label>Cultural nature of activity</label>
-        <div className="checkbox-group">
-          {categories.map((cat, idx) => (
-            <label key={idx}>
-              <input
-                type="checkbox"
-                checked={formData.activities.includes(cat)}
-                onChange={() => handleCheckboxChange(cat)}
-              />
-              {cat}
-            </label>
-          ))}
-        </div>
+        <label>Register Number</label>
+        <input type="text" name="registerNumber" value={formData.registerNumber} onChange={handleChange} required />
 
-        <label>Feedback</label>
-        <table className="feedback-table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Very Good</th>
-              <th>Good</th>
-              <th>Fair</th>
-              <th>Poor</th>
-              <th>Very Poor</th>
-            </tr>
-          </thead>
-          <tbody>
-            {['cultural', 'artistic', 'audience'].map((field, index) => (
-              <tr key={index}>
-                <td>{field === 'cultural' ? 'Cultural Performances' :
-                     field === 'artistic' ? 'Artistic Expression' :
-                     'Audience Engagement'}</td>
-                {['Very Good', 'Good', 'Fair', 'Poor', 'Very Poor'].map((rating, i) => (
-                  <td key={i}>
-                    <input
-                      type="radio"
-                      name={field}
-                      value={rating}
-                      checked={formData.feedback[field] === rating}
-                      onChange={() => handleRadioChange(field, rating)}
-                      required
-                    />
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <label>Email</label>
+        <input type="email" name="email" value={formData.email} onChange={handleChange} required />
 
-        <label>Suggestions or Comments</label>
-        <textarea name="comments" value={formData.comments} onChange={handleInputChange}></textarea>
+        {/* ✅ Render fetched feedback questions */}
+        {questions.map((q, idx) => (
+          <div key={idx}>
+            <label>{q.label}</label>
+            <select name={q.name} value={formData[q.name]} onChange={handleChange} required>
+              <option value="">--Select--</option>
+              {q.options.map((opt, i) => (
+                <option key={i} value={opt}>{opt}</option>
+              ))}
+            </select>
+          </div>
+        ))}
+
+        <label>What did you learn or gain from this event?</label>
+        <textarea name="learning" rows="3" value={formData.learning} onChange={handleChange} />
+
+        <label>Any suggestions for improvement?</label>
+        <textarea name="suggestions" rows="3" value={formData.suggestions} onChange={handleChange} />
 
         <button type="submit">Submit Feedback</button>
       </form>
@@ -122,4 +89,3 @@ const FeedbackForm = () => {
 };
 
 export default FeedbackForm;
-
